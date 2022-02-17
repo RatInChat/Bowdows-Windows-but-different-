@@ -1,6 +1,7 @@
 import time
 import sys
-print("Loading Bodows:")
+import replit
+print("Loading Bodows: ")
 # important vars
 guest = ""
 loadingSignin = ""
@@ -9,7 +10,7 @@ searchQuery = ""
 talks = ""
 # important functions
 def load():
-  print("Loading:")
+  print("Loading: ")
   #animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
   animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
 
@@ -17,11 +18,12 @@ def load():
      time.sleep(0.2)
      sys.stdout.write("\r" + animation[i % len(animation)])
      sys.stdout.flush()
-
+  time.sleep(0.2)
+  replit.clear()
   print("\n")
-
+  
 def load2():
-  print("Loading:")
+  print("Loading: ")
 
 
   #animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
@@ -31,9 +33,12 @@ def load2():
     time.sleep(0.2)
     sys.stdout.write("\r" + animation[i % len(animation)])
     sys.stdout.flush()
-
+  time.sleep(0.2)
+  replit.clear()
   print("\n")
+  
 def apps():
+  print("You have 5 apps!")
   time.sleep(0.5)
   print("1. BoExploer")
   time.sleep(0.5)
@@ -47,19 +52,23 @@ def apps():
   time.sleep(0.5)
   print("6. exit")
   appsChoice = input("What app do you want to open? Choose: " + " ")
+  replit.clear()
   if appsChoice == "1":
     load2()
-    print("Welcome to BoExploer!")
+    print("Welcome to BoExploer! ")
     searchQuery = input("What do you want to search up? Choose: ")
     load2()
-    print("No.")
+    print("No. ")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif appsChoice == "2":
     load2()
     print("Welcome to BoCord!")
     time.sleep(0.5)
     print("Succesfully Logged In!")
-    time.sleep(0.5)
+    time.sleep(1)
+    replit.clear()
     bocord()
   elif appsChoice == "3":
     load2()
@@ -76,6 +85,8 @@ def apps():
     print("VIRUS DETECTED! KILLING TASK!")
     time.sleep(0.2)
     print("CLOSING DARKBO")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif appsChoice == "4":
     load2()
@@ -84,6 +95,8 @@ def apps():
     print("videos")
     load2()
     print("Videos failed to load! Unfortuantly this app is coming soon!")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif appsChoice == "5":
     load2()
@@ -97,6 +110,8 @@ def apps():
     print("Successfully Reported. Wating for an answer...")
     load2()
     print("Answer recived! This app is coming soon....")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif appsChoice == "6":
     print("exiting...")
@@ -105,12 +120,18 @@ def apps():
     load()
     print("Succesfully closed Bowdows! Come back soon!")
   elif appsChoice == "69":
+    replit.clear()
     ayo()
   elif appsChoice == "7":
     print("COMING SOON!")
+    time.sleep(1)
+    replit.clear()
+    apps()
   else:
     time.sleep(0.4)
     print("Invalid choice! Try again!")
+    time.sleep(1)
+    replit.clear()
     apps()
 def bocord():
 
@@ -134,7 +155,8 @@ def bocord():
       print("Bob: Too busy right now/Can't talk.")
       time.sleep(1)
       print("Bob: sorry.")
-      time.sleep(0.9)
+      time.sleep(1)
+      replit.clear()
       bocord()
     elif talks == "2":
       time.sleep(0.5)
@@ -149,7 +171,8 @@ def bocord():
       print("Ken's Parents: Ken is dead. :(")
       time.sleep(1)
       print("You: Oh sorry...")
-      time.sleep(0.9)
+      time.sleep(1)
+      replit.clear()
       bocord()
     elif talks == "3":
       time.sleep(0.5)
@@ -166,7 +189,8 @@ def bocord():
       print("Amantha: My religion or somthing...")
       time.sleep(0.9)
       print("Amantha: Sorry.")
-      time.sleep(0.9)
+      time.sleep(1)
+      replit.clear()
       bocord()
     elif talks == "4":
       time.sleep(0.5)
@@ -177,11 +201,16 @@ def bocord():
       print("Emily: You know what you did.")
       time.sleep(0.3)
       print("Guilt floods you...")
+      time.sleep(1)
+      replit.clear()
       bocord()
     else:
       print("Exiting...")
       load()
+      replit.clear()
       print("Exited!")
+      time.sleep(1)
+      replit.clear()
       apps()
 def ayo():
   print("loading...")
@@ -198,6 +227,8 @@ def ayo():
     print("Massimo dosnt feel like it right now. Come back later and try again!")
     time.sleep(0.5)
     print("You left the room!")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif ayo.lower() == "n":
     time.sleep(0.5)
@@ -206,16 +237,21 @@ def ayo():
     print("Good job.")
     time.sleep(0.5)
     print("You left the room!")
+    time.sleep(1)
+    replit.clear()
     apps()  
   else:
     print("Invalid Choice!")
     time.sleep(0.5)
     print("Try again!")
+    time.sleep(1)
+    replit.clear()
     exitAyo()
 def exitAyo():
   ayo()
 def signIn():
   load()
+  replit.clear()
   print("Welcome to Bodows!")
   time.sleep(1)
   account = input("do you have a Bopez account? Y/N: ")
@@ -225,10 +261,11 @@ def signIn():
     print("Signing in...")
     load2()
     print("Sign In Successfull!")
+    replit.clear()
     print("\n")
     print("Welcome to Bowdows " + username + "!")
-    time.sleep(0.5)
-    print("You have 5 apps!")
+    time.sleep(1)
+    replit.clear()
     apps()
   elif account.lower() == "n":
     guest = input("Enter guest mode? Y/N: ")
@@ -238,10 +275,11 @@ def signIn():
       print("Sign In Successfull!")
       print("\n")
       print("Welcome to Bowdows" + "!")
-      time.sleep(0.5)
-      print("You have 5 apps!")
+      time.sleep(1)
+      replit.clear()
       apps()
     if guest.lower() == "n":
+      replit.clear()
       time.sleep(0.5)
       print("Can not log in as guest or user.")
       time.sleep(0.5)
@@ -259,9 +297,11 @@ def signIn():
       print("task kill succsessfull")
     else:
       print("Invalid Choice!")
+      replit.clear()
       signInOpen()
   else:
     print("invalid choice!")
+    replit.clear()
     signInOpen()
 def signInOpen():
   signIn()
